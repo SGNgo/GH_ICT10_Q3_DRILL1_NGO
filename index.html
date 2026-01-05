@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://pyscript.net/releases/2025.7.3/core.css">
+  <script type="module" src="https://pyscript.net/releases/2025.7.3/core.js"></script>
+  <title>Student Grade Calculator</title>
+  <style>
+    body {
+      font-family: Poppins, sans-serif;
+      background: white;
+      padding: 40px;
+    }
+    .box {
+      max-width: 600px;
+      margin: auto;
+      background: white;
+      padding: 25px;
+      border-radius: 10px;
+      box-shadow: 0 0 8px rgba(0,0,0,0.1);
+    }
+    h1 { text-align: center; color: blue; margin-bottom: 20px; }
+    input { width: 100%; margin-bottom: 10px; padding: 8px; }
+    button { width: 100%; background: blue; color: white; border: none; padding: 10px; border-radius: 5px; cursor: pointer; }
+    #output { margin-top: 20px; }
+  </style>
+</head>
+<body>
+  <div class="box">
+    <h1><strong>Grade Calculator</strong></h1>
+    <input type="text" id="fname" placeholder="First Name">
+    <input type="text" id="lname" placeholder="Last Name">
+
+    <h2><strong>School Subjects</strong></h2>
+    <input type="number" id="math" placeholder="Mathematics">
+    <input type="number" id="science" placeholder="Science">
+    <input type="number" id="english" placeholder="English">
+    <input type="number" id="filipino" placeholder="Filipino">
+    <input type="number" id="pe" placeholder="PE">
+    
+    <button py-click="calculate">Calculate GWA</button>
+    <button py-click="passing_failing">Check Remarks</button>
+    <div id="output"></div>
+  </div>
+  <py-script src="main.py"></py-script>
+</body>
+</html>
